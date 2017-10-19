@@ -1,0 +1,31 @@
+{
+  "name": "mherro.github.io",
+  "version": "0.0.1",
+  "description": "mherro's personal github site",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mherro/mherro.github.io.git"
+  },
+  "keywords": [
+    "herro"
+  ],
+  "author": "Matt Herro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mherro/mherro.github.io/issues"
+  },
+  "homepage": "https://github.com/mherro/mherro.github.io#readme",
+  "devDependencies": {
+    "@angular/compiler": "^4.4.4",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "jquery.terminal": "^1.9.0"
+  }
+}

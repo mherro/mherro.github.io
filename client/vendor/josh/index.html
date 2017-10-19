@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Shell testbed</title>
+
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+  <script>Josh = {Debug: true };</script>
+  <script src="js/history.js"></script>
+  <script src="js/killring.js"></script>
+  <script src="js/readline.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/pathhandler.js"></script>
+  <script src="js/example.js"></script>
+  <style type="text/css">
+    body {
+      margin: 0px;
+    }
+    #shell-panel {
+      height: 400px;
+      width: 100%;
+      background-color: #002f05;
+      color: #00fe00;
+      padding: 20px 20px 20px 20px;
+      font-family: 'Source Code Pro';
+      overflow: scroll;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      border: 1px dashed #E6EBE0;
+    }
+
+    #shell-panel div strong {
+      font-family: 'Source Code Pro' !important;
+      font-weight: bold;
+      color: #EC1F40;
+    }
+
+    #shell-cli .prompt {
+      font-weight: bold ; 
+    }
+
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <section>
+    <div id="shell-panel">
+      <div>Type <code>help</code> or hit <code>TAB</code> for a list of commands.</div>
+      <div id="shell-view"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+
+
+  $(document).ready(function() {
+
+    //var history = new Josh.History();
+    // var killring = new Josh.KillRing();
+    // var cmd1 = new Josh.Input({id: "cmd1"});
+    // var cmd2 = new Josh.Input({id: "cmd2"});
+    const shell = Josh.Shell();
+    let promptCounter = 0;
+
+    shell.onNewPrompt(function(callback) {
+      promptCounter++;
+      callback(`mherrOS [${promptCounter}] $`);
+    });
+
+    shell.setCommandHandler("hello", {
+        exec: function(cmd, args, callback) {
+            var arg = args[0] || '';
+            var response = "who is this " + arg + " you are talking to?";
+            if(arg === 'josh') {
+                response = 'pleased to meet you.';
+            } else if(arg === 'world') {
+                response = 'world says hi.'
+            } else if(!arg) {
+                response = 'who are you saying hello to?';
+            }
+            callback(response);
+        },
+        completion: function(cmd, arg, line, callback) {
+            callback(shell.bestMatch(arg, ['world', 'josh']))
+        }
+    });
+
+    shell.activate();
+  });
+</script>
+</body>
+</html>
