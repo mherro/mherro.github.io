@@ -1,22 +1,56 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to mehrrOS</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
+    <title>Welcome to mherrOS</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal@2.36.0/js/jquery.terminal.min.js"></script>
+    <script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.36.0/css/jquery.terminal.min.css"/>
+    <link rel="stylesheet" href="css/terminal.css"/>
 
-  iframe {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-</style>
+    <script>
+
+        var i = 1;
+
+        $(function() {
+        $('body').terminal(function(command) {
+            this.set_prompt(`mherrOS [${i++}]% `);
+            if (command !== '') {
+
+                if(command === 'hello') {
+                    this.echo('Hello there!');
+                }
+                else if(command === 'links') {
+                    this.echo('~~~~~~~~');
+                    this.echo('LinkedIn: [[!;#14d514;;;https://linkedin.com/in/matthewherro]linkedin.com/in/matthewherro');
+                    this.echo('GitHub: [[!;#14d514;;;https://github.com/mherro]github.com/mherro]');
+                    this.echo('GitHub Site (this page): [[!;#14d514;;;https://mherro.github.io]mherro.github.io]');
+                    this.echo('~~~~~~~~');
+                }
+                else if(command === 'help') {
+                    this.echo('Available commands');
+                    this.echo(' hello : Responds with a greeting');
+                    this.echo(' links : Display links to my sites');
+                } else {
+                    // var result = window.eval(command);
+                    // if (result != undefined) {
+                    //     this.echo(String(result));
+                    // }
+                    this.echo(`Unknown command: ${command}`);
+                    this.echo('Type [[b;;]help] for a list of commands');
+                }
+            }
+        }, {
+            greetings: 'Welcome to mherrOS',
+            name: 'mherrOS',
+            height: '100%',
+            width: '100%',
+            prompt: 'mherrOS [0]% '
+        });
+    });
+    </script>
 </head>
 <body>
-  <iframe src="vendor/jquery.terminal/index.html"></iframe>
 </body>
 </html>
-

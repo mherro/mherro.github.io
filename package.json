@@ -1,6 +1,6 @@
 {
   "name": "mherro.github.io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mherro's personal github site",
   "main": "server/app.js",
   "scripts": {
@@ -21,11 +21,6 @@
   },
   "homepage": "https://github.com/mherro/mherro.github.io#readme",
   "devDependencies": {
-    "@angular/compiler": "^4.4.4",
-    "express": "^4.16.2",
-    "gulp": "^3.9.1"
-  },
-  "dependencies": {
-    "jquery.terminal": "^1.9.0"
+    "express": "4.18.2"
   }
 }
