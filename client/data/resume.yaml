@@ -1,0 +1,166 @@
+name: Matthew Herro
+location: Chicago, IL
+links:
+  - https://linkedin.com/in/matthewherro
+  - https://github.com/mherro
+experiences:
+
+  - organization: oak9
+    title: Software Engineering Manager
+    dates: July 2021 – May 2023
+    summary: Managed engineers across multiple teams to successfully deliver critical features and integrations
+    details:
+      - Determined requirements and developed features for Infrastructure as Code team
+      - Architected and developed scalable event driven IaC processing state machine in AWS
+      - Worked with stakeholders on determining feature requirements and timelines
+      - Developed and deployed application infrastructure using Terraform
+
+  - organization: Reveal Data
+    title: Software Development Manager
+    dates: Feb 2021 - July 2021
+    summary: Managed 9 engineers across 3 product teams.
+    details:
+      - Ran daily standup, sprint planning and end of sprint demo meetings
+      - Coordinated with Product Owner on features and requirements
+      - Met regularly with each team member to discuss progress, resolve any issues and set goals
+      - Coordinated tasks with offshore development and QA teams
+      - Performed code reviews and mentored junior developers
+      - Migrated application deployment to AWS
+
+  - organization: Reveal Data
+    title: AI Engineering Team Lead
+    dates: Aug 2020 – Feb 2021
+    summary: Led AI engineering team during the acquisition of NexLP by Reveal Data
+    details:
+      - Worked with new team to set goals for integration of the two applications
+      - Took on Dev Ops role managing deployment pipeline and Cloud resources
+      - Led trainings on code base for new team members
+
+  - organization: NexLP
+    title: Engineering Team Lead
+    dates: Feb 2020 – Aug 2020
+    summary: Successfully led team in launch of multi-tenant Cloud deployment of our application
+    details:
+      - Worked closely with the Product team to design and prioritize new features
+      - Performed scrum master duties
+      - Reported directly to founders to determine team goals and release deadlines
+      - Supported Data Science team in optimizing the creation and application of AI models
+      - Met with clients to resolve issues and remove any roadblocks
+
+  - organization: NexLP
+    title: Senior Software Engineer
+    dates: Sep 2019 – Feb 2020
+    summary: Developed new features for industry leading, AI powered eDiscovery application using React, C# and Java.
+    details:
+      - Refactored and debugged existing code base. 
+      - Modernized development processes and practices by implementing code reviews, cleaned and migrated multiple codebases to Git
+      - Added automated unit testing to code review pipeline
+      - Implemented modern build pipeline.
+
+  - organization: Bounteous
+    title: Solution Architect
+    dates: Aug 2018 – Aug 2019
+    projects:
+      - client: Natural Gas Midstream
+        details:
+          - Managed Azure resources, Continuous Integration and deployment processes
+          - Developed web, mobile and API applications. Worked with client to determine cloud architecture
+
+  - organization: Bounteous
+    title: Senior Web Developer
+    dates: Feb 2013 – Aug 2018
+    projects:
+      - client: Natural Gas Midstream
+        details:
+          - Created REST API micro services in Node.js and Typescript to provide reporting data
+          - Developed mobile app for safety reporting using Angular, Ionic Native and CouchDB
+          - Deployed and managed Azure App Service, Service Bus, Function and API Gateway
+          - Configured and customized Auth0 and Azure Active Directory integration for Authentication and Authorization
+
+      - client: Regional Hospital Group
+        details:
+          - Developed Sitefinity CMS module in C# to search and display Event and Class data using a REST API
+          - Integrated with Authorize.net Accept.js for payment processing
+
+      - client: Retirement Services Firm
+        details:
+          - Developed Angular web application to allow employees to select retirement plan options
+          - Modeled data in JSON and designed REST API calls
+          - Setup development and test environment using Vagrant and Node.js
+
+      - client: Marketing Services Firm
+        details:
+          - Designed and developed Java Middleware that connects web and mobile client applications to backend databases and 3rd party systems.
+          - Made use of open source libraries (Dropwizard, Elide) to quickly deliver JSONAPI REST web service
+          - Created batch process to sync with marketing data sources
+          - Leveraged API interface to update 3rd party email and SMS systems
+
+      - client: Fare Collection Agency
+        details:
+          - Developed Smart Card encoding module Java library shared across Fulfillment and Point of Sale Applications
+          - Encoded encrypted MIFARE DESFire and Ultralight C Smart Cards
+          - Lead developer for Point of Sale Applications Agile team that designed, developed and implemented new system
+          - Leveraged Sencha Touch JavaScript framework to build Android and Windows Point Of Sale applications that interfaced with AWS Cloud using S3 and SQS
+          - Integrated with receipt printer, smart card encoder, patron display and credit card payment terminal
+          - Lead Developer for new E-commerce Fulfillment Application. Utilized jQuery powered front end with Spring MVC and MySQL backend
+          - Lead Developer providing support and new features for legacy E-commerce, Customer Service and Order Fulfillment web application
+
+  - organization: Maelstrom Solutions
+    title: Senior Application Developer
+    dates: Aug 2003 - Feb 2013
+    projects:
+      - client: Global Automotive and Building Services Corporation
+        details:
+          - Created service to automatically generate weekly PowerPoint reports with graphical charts of sales data, eliminating need to create reports manually. VB.NET, SQL Server 2008
+          - Overhauled online document management system. Reduced error rate from daily to near zero. Improved document search speed and accuracy. VB.NET, SQL Server 2005
+          - Created web application to schedule, execute and distribute Cognos reports. Developed C# interface to Cognos using COM Interop. C#, ASP.NET, Oracle
+          - Gathered requirements, designed and developed online bill payment and reconciliation system. Created interface with Oracle Accounts Payable system to issue payments for tax and health care bills. Wrote process to bulk load claim Excel files and reconcile against payments. C#, ASP.NET, Oracle, PL/SQL
+          - Internationalized and updated health and safety reporting web application. Created functionality to add any number of languages and corresponding translations. ASP, VB COM, Oracle
+          - Upgraded and maintained online corporate salary planning application. ASP, Oracle, PeopleSoft
+          - Maintained existing corporate web applications, integrated with LDAP, Active Directory, and Single Sign On systems.
+
+      - client: National Automotive Organization
+        details:
+        - Gathered requirements, designed and developed an online portal to allow regional clubs to view and report on sales and product data. Developed ETL process to transfer data from Informix to SQL Server using C#, ASP.NET, Informix, SQL Server 2000
+        - Created web application for map assemblers to enter trip data, then automatically compile and print PDF booklets
+      - client: Educational Service Company
+        details:
+        - Designed, developed and maintained an online service log for special education teachers to enter daily service data for students using C#, ASP.NET, SQL Server 2005
+
+  - organization: Revenue Without Ratings
+    title: Principal Software Engineer
+    dates: Sep 2002 - Jun 2015
+    details:
+    - Rewrote and upgraded e-commerce site used by radio stations to sell printable discount certificates for local businesses. Improved site uptime to near 100%. 
+    - Added credit card processing using PayPal Payments Pro. 
+    - Created graphical sales and site stats reports. C#, ASP.NET, SQL Server 2005
+
+  - organization: JG Sullivan Interactive
+    title: Interactive Programmer
+    dates: Mar 2001 - Sep 2002
+    details:
+    - Designed and developed e-commerce website for the home appliance industry as part of a two-person team using Java, Perl and Oracle. Wrote database synchronizing and loading scripts.
+    - Updated and maintained several e-commerce sites. Managed application and web servers on Unix systems.
+
+  - organization: Tallan Inc
+    title: Consultant
+    dates: Aug 2000 - Mar 2001
+    details:
+    - Designed and developed online bug tracking system. Java, Oracle
+
+education:
+  school: University of Notre Dame
+  location: Notre Dame, IN
+  dates: 1996 - 2000
+  degree: Bachelor of Science in Computer Science
+
+skills:
+  - Azure App Services, Function Apps, Cosmos DB, Azure SQL, Azure AD
+  - AWS EC2, SQS. SNS, Lambda, DynamoDB, Step Functions
+  - Java, JavaScript, TypeScript, C#, ASP.NET, HTML, CSS, Angular, React, Go, Python
+  - Terraform, CloudFormation
+  - Windows Server, Linux, Mac OS X, Docker
+  - Node.js, JBoss, Jetty, IIS, Apache, Tomcat
+  - SQL Server, Redis, Oracle, MySQL, SQLite, TSQL, PL/SQL
+  - Visual Studio, SQL Server Management Studio, Eclipse, IntelliJ, Rider
+  - Git, Subversion

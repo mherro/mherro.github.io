@@ -11,28 +11,73 @@
 
     <script>
 
-        var i = 1;
+        let i = 1;
+
+        const greetings = [
+            'Hello there, thanks for stopping by!',
+            'Hi!',
+            'Howdy',
+            'Hello',
+            'What\s up?',
+            'Hey',
+            'Hello and thank you for visiting',
+            'HI',
+            'Yes?',
+            'Nice to meet you',
+        ];
+
+        const files = [
+            "resume.yaml"
+        ]
 
         $(function() {
         $('body').terminal(function(command) {
             this.set_prompt(`mherrOS [${i++}]% `);
-            if (command !== '') {
 
-                if(command === 'hello') {
-                    this.echo('Hello there!');
+            let cmd = $.terminal.parse_command(command);
+
+            if (cmd.name !== '') {
+
+                if(cmd.name === 'hello') {
+                    let index = Math.round(Math.random() * (greetings.length - 1));
+                    console.log(`index: ${index}`);
+                    let response = greetings[index]
+                    this.echo(response);
                 }
-                else if(command === 'links') {
+                else if(cmd.name === 'links') {
                     this.echo('~~~~~~~~');
                     this.echo('LinkedIn: [[!;#14d514;;;https://linkedin.com/in/matthewherro]linkedin.com/in/matthewherro');
                     this.echo('GitHub: [[!;#14d514;;;https://github.com/mherro]github.com/mherro]');
                     this.echo('GitHub Page (this page): [[!;#14d514;;;https://mherro.github.io]mherro.github.io]');
                     this.echo('~~~~~~~~');
                 }
-                else if(command === 'help') {
+                else if(cmd.name === 'help') {
                     this.echo('Available commands');
+                    this.echo(' cat [file] : View file');
                     this.echo(' clear : Clears the terminal screen');
                     this.echo(' hello : Responds with a greeting');
                     this.echo(' links : Display links to my sites');
+                    this.echo(' ls : Lists files');
+                }
+                else if(cmd.name === 'ls') {
+                    
+                    files.sort().forEach(file => {
+                        this.echo(file)
+                    });
+
+                } else if (cmd.name === "cat") {
+
+                    if (cmd.args.length == 1) {
+                        let fileName = cmd.args[0].toLowerCase();
+                        $.get(`data/${fileName}`).then(text => {
+                            this.echo(text);
+                        }).fail(e => {
+                            this.echo("Unknown file")
+                        });
+                    } else {
+                        this.echo("Please specify a single file")
+                    }
+
                 } else {
                     // var result = window.eval(command);
                     // if (result != undefined) {
